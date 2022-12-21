@@ -11,3 +11,345 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*{
+  padding: 0;
+  margin: 0;
+}
+nav .disnone{
+ display: none;
+ 
+}
+nav .disflex{
+  display: flex;
+}
+/* nav .nav{
+  position: absolute;
+  background-color: black;
+  z-index: 2;
+  inset: 0;
+} */
+nav .nav-icon{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  /* background-color:white;
+  border: rgba(128, 128, 128, 0.178) 1px solid; */
+}
+nav .nav-box{
+ 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  z-index: 2;
+  inset: 9% 4% 50% 4%;
+  
+}
+.nav-box p{
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 1s;
+}
+.nav-box p:hover{
+  border-bottom: yellow solid 1px;
+}
+nav .request{
+  display: none;
+}
+.first-main{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 7em;
+}
+.first-main .box1{
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+}
+.first-main .box1 .font-lg{
+  font-size: 2.5rem;
+ 
+}
+.box1 .button-gr{
+  background-color: hsl(136, 65%, 51%);
+  padding: .7em 1.6em;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.first-main .box2{
+  order: 1;
+  background-image: url(images/bg-intro-mobile.svg);
+  overflow: hidden;
+  background-position: (center);
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.first-main .box2 img{
+  position: relative;
+  width: 100%;
+  top: -130px;
+  
+  /* background-image: url(images/image-mockups.png);
+  background-position: 10%,-40%;
+  background-size: contain;
+  background-repeat: no-repeat; */
+  
+}
+.grid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  color: grey;
+}
+.grid .div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  
+}
+.div p:first-of-type{
+  font-size: 1.3rem;
+  color: black;
+}
+.grid .div img{
+  width: 30%;
+}
+.easy{
+  margin-bottom: 3.5em;
+}
+.pad{
+  padding: 0 2em;
+  text-align: center;
+}
+.latest{
+  margin-bottom: 1em;
+  /* text-align: initial; */
+}
+.f-pad{
+  padding: 3em 2em;
+  background-color: hsl(0, 0%, 98%);
+  color: grey;
+}
+.s-pad{
+  padding: 4em 2em;
+  background-color: hsl(220, 16%, 96%);
+}
+.font-md{
+  font-size: 2rem;
+  margin-bottom: .5em;
+  color: black;
+}
+.pic{
+  width: 100%;
+}
+.part{
+  background-color:mintcream;
+  padding: 1em 2em 3em  2em;
+  text-align: initial;
+  color: grey;
+}
+.part *{
+  margin-bottom: .5em;
+}
+.part p:nth-of-type(2){
+  font-size: 1.2rem;
+  color: black;
+}
+.part p:nth-of-type(1){
+  font-size: .7rem;
+  text-align: left;
+}
+.whi{
+  background-color: white;
+  width: 100%;
+  outline: 0;
+}
+footer{
+  background-color: hsl(233, 26%, 24%);
+  padding: 3em 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+footer .footer-box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-box1 .align{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-box1 .footer-icons-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.footer-icons-box .icon-space{
+  margin-right: 1.1em;
+}
+footer .footer-box2{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.footer-box2 .request{
+  background-color: hsl(136, 65%, 51%);
+  padding: .4em 1.3em;
+  /* text-align: center; */
+  margin-bottom: .8em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media(min-width:774px){
+  .grid{
+    flex-direction: initial;
+    flex-wrap: wrap;
+    gap: 2em
+  }
+  .first-main{
+    flex-direction: row;
+  
+    padding: 0;
+    gap: 2em;
+    max-height: 600px;
+    
+  }
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .footer-box1{
+    flex-direction: row;
+    gap: .5em;
+  }
+  .first-main .box1{
+     order: 1;
+     padding-left: 3em;
+    
+  }
+  .first-main .box1 p{
+    max-width: 400px;
+  }
+  .first-main .box2{
+    order: 2;
+    flex: 1;
+    /* background-color: red; */
+    /* background-image: url(images/bg-intro-desktop.svg); */
+    background-size: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+  }
+  .first-main .box2 img{
+    top: 50px;
+    flex-shrink: 1;
+    width: 100%;
+    right: -40px;
+  }
+  nav .hamburger{
+    display:  none;
+  }
+  nav .nav-box{
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color:initial;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-box p{
+    margin-right: 1em;
+  }
+  nav .request{
+    display: block;
+    background-color: hsl(136, 65%, 51%);
+    padding: .4em 1.3em;
+    /* text-align: center; */
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  nav .nav-icon{
+    display: block;
+    padding: 0;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+  }
+  .grid > div{
+    max-width:340px;
+  }
+  .easy{
+    max-width: 500px;
+  }
+  
+}
+@media(min-width:974px){
+  .easy{
+    text-align: initial;
+  }
+  .first-main .box1{
+    padding-left: 9em;
+     text-align: left;
+     flex: 1;
+    align-items: flex-start;
+  }
+  .first-main{
+    gap: 0;
+  }
+  .f-pad{
+    padding: 3em 9em;
+    
+  }
+  .grid > div{
+    max-width:299.5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .grid  div img{
+    align-self: flex-start;
+  }
+  .grid  div p{
+    align-self: flex-start;
+    text-align: left;
+  }
+  footer .footer-box1{
+    gap: 5em;
+  }
+  .latest{
+    text-align: left;
+    margin-left: 140px;
+  }
+}
